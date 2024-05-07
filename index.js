@@ -104,14 +104,11 @@ const logo = document.querySelector(".logo");
       function scrollMenu(event) {
             click++;
             const list = document.querySelector('.menu');
-            if (click === 1) {
+            if (click >= 1) {
                   list.classList.remove('hidden');list.classList.remove('close');
                   list.classList.add('open');console.log('Open');
             }
-            if (click > 0) {
-                  list.classList.remove('hidden');list.classList.remove('close');
-                  list.classList.add('open');console.log('Open');
-            }
+          
             if (click % 2) {
                   list.classList.remove('open');
                   list.classList.add('close');console.log('Close');
