@@ -1,0 +1,122 @@
+const logo = document.querySelector(".logo");
+      const nav = document.getElementById('fixed');
+      const  imgLogo = document.querySelector(".img-logo");
+      const lupa = document.querySelector(".search");
+      const input = document.querySelector("input");
+      const inputValue = document.getElementsByTagName("input").value;
+      const head = document.querySelector('.paralax');
+      const navBar = document.querySelector('.nav-bar');
+      
+      const  number = 130;
+
+       imgLogo.addEventListener('mousemove',(event)=>{
+            head.style.perspective=60+"px";
+       });
+      var pageSizeX = pageXOffset.clientWidht;
+      document.addEventListener( 'xxxxx zistiť ako pri zmene velkosti okna dat funkciu',(event) =>{
+            if (window.innerWidth > 900) {
+                  console.log(window.innerWidth);
+                  input.classList.add('hidden');
+            }
+      });     
+            window.addEventListener('scroll', (e)=>{
+               //  imgLogo.classList.add('append-animation');
+            });
+      
+      window.addEventListener( 'scroll',(event) => {            
+            var currentScroLLY = window.scrollY;
+            if (window.scrollY > 1) {                  
+                  console.log(window.scrollY);
+                  
+            }
+            if( currentScroLLY > number) {
+                  // lupa.classList.add('hidden');
+                  // input.classList.add('hidden');
+                  logo.classList.remove('hidden');
+                  logo.classList.add('visible');
+                  nav.classList.add('sticky');
+                  // lupa.remove();
+                  imgLogo.classList.remove('animation');
+            }
+            if ( currentScroLLY < number ) {
+                  imgLogo.classList.remove('append-animation');
+                  imgLogo.classList.add('animation');
+                  nav.classList.remove('sticky');
+                  // lupa.classList.remove('hidden');
+                  // lupa.classList.add('vivible');
+                  // input.classList.remove('hidden');
+                  logo.classList.remove('visible');
+                  logo.classList.add('hidden');
+                  navBar.appendChild(input);
+                  navBar.appendChild(lupa);
+            }
+            
+      });
+      
+      var click = 1;
+      document.querySelector('.fa-search').addEventListener('click',mySearch);
+      function mySearch(event) {
+            console.log("kliklo sa na lupu");
+            click++;
+            if(click === 1){
+                  input.classList.remove('hidden');
+                  input.classList.add('visible');
+            }
+            if(click > 0){
+                  input.classList.remove('hidden');
+                  input.classList.add('visible');
+            }
+            if (click % 2) {
+              input.classList.remove('visible');
+              input.classList.add('hidden');
+              console.log(click);
+           }   
+                
+      };
+      document.querySelector('input').addEventListener('keypress',mySelect);
+      function mySelect(event) {
+            console.log("input key press");
+            if (event.key ==="Enter") {
+            //     zistit ako zobrat text z inputu v js 
+                  console.log("Input Value čiže text s inputu :"+ inputValue);
+                  input.classList.add('hidden');
+            }
+            if (event.key ==="Down") {
+                  console.log("Delete");
+                  
+            }
+      };
+
+      var  j = "J";
+     
+      window.addEventListener('keypress',(event) => {
+            if (event.keyCode === 74) {
+                  console.log("J");                  
+            }
+           
+            if (event.key ==="Enter") {
+                  console.log("Enter");
+            }
+      });
+
+      document.querySelector('.fa-bars').addEventListener('click',scrollMenu);
+      
+      function scrollMenu(event) {
+            click++;
+            const list = document.querySelector('.menu');
+            if (click === 1) {
+                  list.classList.remove('hidden');list.classList.remove('close');
+                  list.classList.add('open');console.log('Open');
+            }
+            if (click > 0) {
+                  list.classList.remove('hidden');list.classList.remove('close');
+                  list.classList.add('open');console.log('Open');
+            }
+            if (click % 2) {
+                  list.classList.remove('open');
+                  list.classList.add('close');console.log('Close');
+                  setTimeout(() => {
+            window.location.reload();
+        }, 3100);
+      }
+}

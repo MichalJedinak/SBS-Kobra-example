@@ -1,0 +1,55 @@
+.sticky {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      }
+      
+.color{
+      color: crimson;
+}
+.visible{
+      visibility: visible;
+}
+.hidden{
+      visibility: hidden;    
+}
+.remove{
+      color: antiquewhite;
+      
+}
+.close{
+      animation: rollMenuUp 5s  linear both ;
+      -webkit-animation: rollMenuUp 5s  linear both ;
+      animation-duration: 3s;
+      animation-delay: 1s ;
+      animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.open{
+      visibility: visible;
+      width: 100%;
+      animation: rollMenuDown linear both;
+      -webkit-animation: rollMenuDown linear both;
+      animation-duration: 3.2s;
+      animation-delay: .5S ;
+      animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.append-animation{
+      perspective: 60px;
+      animation: upAndDown .5s linear forwards;
+      -webkit-animation: upAndDown .5s linear forwards;
+}
+.animation{
+      animation: logoScroll 2s  linear both;
+      -webkit-animation: logoScroll 2s  linear both;
+}
+.margin-right{
+      margin-right: 4rem;
+}
+.txt-center{
+      text-align: center;
+}
+.txt-upcase{
+      text-transform: uppercase;
+}
