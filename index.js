@@ -7,14 +7,32 @@ const logo = document.querySelector(".logo");
       const head = document.querySelector('.paralax');
       const navBar = document.querySelector('.nav-bar');
       
+      const MnueBar = window.document.querySelector('.column');
+      const liMenuBar = document.querySelectorAll('.column > *');
+
       const  number = 130;
 
        imgLogo.addEventListener('mousemove',(event)=>{
             head.style.perspective=60+"px";
        });
+       
+       const menuu = document.querySelector('.menu');
+       
+       window.addEventListener('click', (e)=>{
+       });
        window.addEventListener( 'resize',(event) =>{
-            const windowWidth = window.innerWidth;
+             const windowWidth = window.innerWidth;
+             var size =2;
+            let minusX  = - 0.0001;
+            size = size - minusX;
+          
             if (windowWidth < 908) {
+                  for (let index = 908; index > windowWidth; index--) {
+                        size--;
+                        console.log(liMnueBar);
+                       console.log(size);  
+                       liMnueBar.style.fontSize=size+"rem";                    
+                  }
             //     console.log(windowWidth+"px");
                 input.classList.add('hidden');
             }

@@ -29,27 +29,27 @@
             line-height: 0;
             font-size: 0;
             opacity: 0;
-            transform: scale(10px);
+            -o-transform: scale(10px);
             visibility: hidden;
             -webkit-transform: scale(10px);
             -moz-transform: scale(10px);
             -ms-transform: scale(10px);
-            -o-transform: scale(10px);
+            transform: scale(10px);
 }
 }
 @keyframes logoScroll{
       0%{
-            transform:translateY(1rem);
+            -o-transform:translateY(1rem);
             -webkit-transform:translateY(1rem);
             -moz-transform:translateY(1rem);
             -ms-transform:translateY(1rem);
-            -o-transform:translateY(1rem);
+            transform:translateY(1rem);
 }50%{
-            transform:translateY(-1rem);
+            -o-transform:translateY(-1rem);
             -webkit-transform:translateY(-1rem);
             -moz-transform:translateY(-1rem);
             -ms-transform:translateY(-1rem);
-            -o-transform:translateY(-1rem);
+            transform:translateY(-1rem);
 }
 }
 @keyframes  upAndDown{

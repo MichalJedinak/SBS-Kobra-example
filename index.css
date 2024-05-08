@@ -17,13 +17,23 @@
       --container-clr:white;
       --sub-title-font-family:"Lato", sans-serif;
 }
-html{
+*{
       margin: 0;
       padding: 0;
       box-sizing: border-box;
 }
 *::before , *::after{
       box-sizing: border-box;
+}
+html{
+      box-sizing: inherit;
+      -webkit-smooting:antialiased;
+      -moz-smooting:antialiased;
+      -moz-scroll-behavior:smooth;
+      scroll-padding: 2em;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      scroll-behavior: smooth;
 }
 body{
       background-color: var(--body-bg);
@@ -135,7 +145,7 @@ input {
       gap: .5rem;
       color: silver;
       right: 1.5rem;
-      top: -0.625em;
+      top: 0.625em;
       font-size: 1rem;
       font-family: consolas;
       font-weight: 100;
@@ -154,7 +164,8 @@ section{
       position: absolute;
       top: 3rem;
       right: 0;
-      line-height: 1.6rem;  
+      line-height: 1.6rem; 
+      padding-left: 1rem; 
 }
 .column{
       display: flex;
