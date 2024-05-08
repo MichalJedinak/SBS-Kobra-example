@@ -2,7 +2,7 @@ const logo = document.querySelector(".logo");
       const nav = document.getElementById('fixed');
       const  imgLogo = document.querySelector(".img-logo");
       const lupa = document.querySelector(".search");
-      const input = document.querySelector("input");
+      const input = window.document.querySelector("input");
       const inputValue = document.getElementsByTagName("input").value;
       const head = document.querySelector('.paralax');
       const navBar = document.querySelector('.nav-bar');
@@ -54,15 +54,15 @@ const logo = document.querySelector(".logo");
       });
       
       var click = 1;
-      document.querySelector('.fa-search').addEventListener('click',mySearch);
+      window.document.querySelector('.fa-search').addEventListener('click',mySearch);
       function mySearch(event) {
             console.log("kliklo sa na lupu");
             click++;
-            if(click === 1){
+            if(click > 0){
                   input.classList.remove('hidden');
                   input.classList.add('visible');
             }
-            if(click > 0){
+            if(click === 1){
                   input.classList.remove('hidden');
                   input.classList.add('visible');
             }
@@ -73,7 +73,7 @@ const logo = document.querySelector(".logo");
            }   
                 
       };
-      document.querySelector('input').addEventListener('keypress',mySelect);
+      window.document.querySelector('input').addEventListener('keypress',mySelect);
       function mySelect(event) {
             console.log("input key press");
             if (event.key ==="Enter") {
@@ -99,12 +99,16 @@ const logo = document.querySelector(".logo");
             }
       });
 
-      document.querySelector('.fa-bars').addEventListener('click',scrollMenu);
+      window.document.querySelector('.fa-bars').addEventListener('click',scrollMenu);
       
       function scrollMenu(event) {
             click++;
             const list = document.querySelector('.menu');
-            if (click >= 1) {
+            if (click > 0) {
+                  list.classList.remove('hidden');list.classList.remove('close');
+                  list.classList.add('open');console.log('Open');
+            }
+            if (click === 1) {
                   list.classList.remove('hidden');list.classList.remove('close');
                   list.classList.add('open');console.log('Open');
             }
