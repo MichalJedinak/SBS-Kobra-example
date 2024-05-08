@@ -116,14 +116,16 @@ nav{
       margin: auto;
 }
 .search{     
-      margin-left: 1rem;
+      margin-left: 0.5rem;
       font-weight: 100;
       color: white;
       text-align: center;
       display: flex;
       align-self: center;
       gap: .5rem;
+      padding-right: 1rem;
 }
+
 input {
       visibility: hidden;
       width: 170px;
