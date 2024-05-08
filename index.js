@@ -12,11 +12,11 @@ const logo = document.querySelector(".logo");
        imgLogo.addEventListener('mousemove',(event)=>{
             head.style.perspective=60+"px";
        });
-      var pageSizeX = pageXOffset.clientWidht;
-      document.addEventListener( 'xxxxx zistiť ako pri zmene velkosti okna dat funkciu',(event) =>{
-            if (window.innerWidth > 900) {
-                  console.log(window.innerWidth);
-                  input.classList.add('hidden');
+       window.addEventListener( 'resize',(event) =>{
+            const windowWidth = window.innerWidth;
+            if (windowWidth < 908) {
+            //     console.log(windowWidth+"px");
+                input.classList.add('hidden');
             }
       });     
             window.addEventListener('scroll', (e)=>{
@@ -90,7 +90,7 @@ const logo = document.querySelector(".logo");
       var  j = "J";
      
       window.addEventListener('keypress',(event) => {
-            if (event.keyCode === 74) {
+            if (event.key === 74) {
                   console.log("J");                  
             }
            
